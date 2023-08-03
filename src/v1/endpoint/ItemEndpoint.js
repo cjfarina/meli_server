@@ -31,7 +31,7 @@ const searchItems = async (query) => {
         id: item.id,
         title: item.title,
         price: {
-          currency: json.currency_id === "ARS" ? "$" : json.currency_id,
+          currency: item.currency_id === "ARS" ? "$" : item.currency_id,
           amount: Math.trunc(item.price),
           decimals: getDecimal(item.price),
         },
